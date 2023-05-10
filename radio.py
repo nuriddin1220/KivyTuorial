@@ -5,7 +5,7 @@ from kivy.core.window import Window
 
 
 # Designate Our .kv design file 
-Builder.load_file('check.kv')
+Builder.load_file('radio.kv')
 
 class MyLayout(Widget):
     checks=[]

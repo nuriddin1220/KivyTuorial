@@ -1,0 +1,38 @@
+#:import Factory kivy.factory.Factory
+
+<MyPopup@Popup>
+    auto_dismiss: False #you need to click button to clause popup,else if true clickeing anything clause popup
+    size_hint:0.6,0.2
+    pos_hint:{"x":0.2,"top":0.9}
+    title: "this is a popup box"
+    BoxLayout:
+        orientation: "vertical"
+		size: root.width, root.height
+        Label:
+            text: "something in out popup box"#popub only take one widget
+            font_size:24
+        Button:
+            text: "Close Me!"
+            font_size: 24
+            on_release: root.dismiss()#popup built in function  
+    # Label:
+    #     text: "something in out popup box"#popub only take one widget
+    #     font_size:24
+    # Button:
+    #     text: "Close Me!"
+    #     font_size: 24
+    #     on_release: root.dismiss()#popup built in function
+
+<MyLayout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+
+        Label:
+            text: "Popub Stuff"
+            font_size: 32
+
+        Button:
+            text: "Popup"
+            font_size: 32
+            on_release:Factory.MyPopup().open()
