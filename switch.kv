@@ -1,0 +1,16 @@
+<MyLayout>
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width,root.height
+
+        Label:
+            id:my_label
+            text:'The switch is ON!'
+            font_size: 32
+        
+        Switch:
+            id:my_switch
+            active:False
+            # disabled:True
+            font_size:32
+            on_active:root.switch_click(self,self.active)

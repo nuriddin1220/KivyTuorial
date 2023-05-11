@@ -1,0 +1,27 @@
+<MyLayout>
+	do_default_tab:False
+    size_hint:0.5,0.5
+    pos_hint: {'center_x': 0.5, 'center_y':0.5 }
+
+    tab_pos:"left_top"
+    # tab_pos:"bottom_right"
+
+    TabbedPanelItem:
+        text: 'Tab1'
+
+        Label:
+            text:'Hello World!'
+        
+    TabbedPanelItem:
+        text: 'Tab2'
+
+        BoxLayout:
+            Label:
+                text:'Press The Button =>'
+            Button:
+                text:'Click Me!'
+
+    TabbedPanelItem:
+        text: 'Tab3'
+        Image:
+            source:"musk.jpg"

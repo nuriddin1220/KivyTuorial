@@ -1,0 +1,17 @@
+<MyLayout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+
+        Label:
+            id:click_label
+            text:'Pick favorite pizza'
+            font_size: 32
+
+        Spinner:
+            id:spinner_id
+            text:'Favorite Pizza'
+            values:["Peperoni","cheese","Mushroom"]
+            on_text:root.spinner_clicked(spinner_id.text)
+        Label:
+            text:''
